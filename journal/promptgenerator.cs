@@ -1,16 +1,21 @@
-using system;
+using System;
+using System.Collections.Generic;
 
-public class promptgenerator
+public class PromptGenerator
 {
-    List<string> Prompts = new List<string>()
+    public List<string> Prompts = new List<string>()
     {
-        "What was the highlight of your day?",
-        "what was the low-ligt of your day?",
-        "What was the hardest part of your day?",
-        "What friends or people did you talk to?",
+        "What made you happy today?",
+        "What did you learn today?",
+        "What was the most challenging part of your day?",
+        "Who did you talk to today?",
+        "What are you grateful for today?"
     };
-    string GetRandomPrompt()
+
+    public string GetRandomPrompt()
     {
         Random random = new Random();
+        int index = random.Next(Prompts.Count);
+        return Prompts[index];
     }
 }

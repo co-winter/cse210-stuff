@@ -1,19 +1,16 @@
 using System;
-using System.Net.WebSockets;
 
 public class Entry
 {
-    string day;
-    string prompt;
-    string response;
+    public string Date;
+    public string Prompt;
+    public string Response;
 
-//calling display will show the past journal entries
-    void display() 
+    public void Display()
     {
-        Console.Write("day");
-        Console.Write("prompt");
-        Console.Write("response");
-
+        Console.WriteLine("Date: " + Date);
+        Console.WriteLine("Prompt: " + Prompt);
+        Console.WriteLine("Response: " + Response);
+        Console.WriteLine("------------------------------");
     }
-
 }
