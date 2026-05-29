@@ -8,7 +8,7 @@ class Program
 
         string text = "Trust in the Lord with all thine heart and lean not unto thine own understanding in all thy ways acknowledge him and he shall direct thy paths";
 
-        scripture scripture = new scripture(reference, text);
+        Scripture scripture = new Scripture(reference, text);
 
         bool continueProgram = true;
 
