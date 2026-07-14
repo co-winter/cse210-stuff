@@ -1,16 +1,17 @@
-public class Running : Activity
+public class Swimming : Activity
 {
-    private double _distance;
+    private int _laps;
 
-    public Running(string date, int minutes, double distance)
+    public Swimming(string date, int minutes, int laps)
         : base(date, minutes)
     {
-        _distance = distance;
+        _laps = laps;
     }
 
     public override double GetDistance()
     {
-        return _distance;
+        // 50 meters per lap converted to miles
+        return (_laps * 50.0 / 1000) * 0.62;
     }
 
     public override double GetSpeed()
@@ -25,7 +26,7 @@ public class Running : Activity
 
     public override string GetSummary()
     {
-        return $"{GetDate()} Running ({GetMinutes()} min) - " +
+        return $"{GetDate()} Swimming ({GetMinutes()} min) - " +
                $"Distance: {GetDistance():0.0} miles, " +
                $"Speed: {GetSpeed():0.0} mph, " +
                $"Pace: {GetPace():0.0} min per mile";
